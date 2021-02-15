@@ -1,0 +1,179 @@
+/* Reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Reset*/
+
+body {
+    height: 100vh;  
+    width: auto;
+   
+}
+
+    main {
+        height: 84%;
+    }
+
+        main section {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1.7% 1fr 1.7%;
+            grid-template-rows: 3% 1fr 3%;
+        }
+
+            .grid-container {
+                grid-row-start: 2;
+                grid-column-start: 2;
+            }
+
+            .grid-container {
+                height: 100%;
+                width: auto;
+                display: grid;
+                /* grid-template-columns: 1.7% 2fr repeat(4, 1fr) 1.7%;
+                grid-template-rows: 3% repeat(10, 9.4%) 3%; */
+                grid-template-columns: 2fr repeat(4, 1fr);
+                grid-template-rows: repeat(10, 1fr);
+                grid-column-gap: 1.7%;
+                grid-row-gap: 3%;
+            }
+
+            /* <first row> */
+                .grid1 {
+                    background: rgba(0, 127, 95, 1);
+                    grid-row: 1/4;
+                }
+
+                .grid2 {
+                    background: rgba(43, 147, 72, 1);
+                    grid-row-start: 4;
+                    grid-row-end: span 3;
+                }
+
+                .grid3 {
+                    background: rgba(85, 166, 48, 1);
+                    grid-row: 7/11;
+                }
+            /* </first row> */
+
+            /* <second row> */
+                .grid4 {
+                    background: rgba(128, 185, 24, 1);
+                    grid-column: span 2;
+                    grid-row: span 6;
+                }
+
+                .grid5 {
+                    background: rgba(170, 204, 0, 1);
+                    grid-row: 7/span 2;
+                }
+
+                .grid6 {
+                    background: rgba(191, 210, 0, 1);
+                    grid-row: 9/span 2;
+                }
+
+                .grid7 {
+                    background: rgba(212, 215, 0, 1);
+                    grid-row: 7/span 4;
+                    grid-column: 3/span 2;
+                }
+            /* </second row> */
+
+            /* <third row> */
+                .grid8 {
+                    background: rgba(221, 223, 0, 1);
+                    grid-row: span 2;
+                    grid-column: span 2;
+                }
+
+                .grid9 {
+                    background: rgba(238, 239, 32, 1);
+                    grid-row: 3/span 2;
+                    grid-column: 4/span 2;
+                }
+
+                .grid10 {
+                    background: rgba(255, 255, 63, 1);
+                    grid-row: 5/7;
+                    grid-column: 4/6;
+                }
+
+                .grid11 {
+                    background: rgba(0, 127, 95, 1);
+                    grid-row: 7/11;
+                    grid-column: 5/span 1;
+                }
+                
+            /* </third row> */
+
+           
+
+    footer {
+        height: 16%;
+    }
+
+        footer section {
+            height: 100%;
+            background-color: #9BC1BC;
+            display: grid;
+            grid-template-rows: 23% 54% 23%;
+            grid-template-columns: 1.7% 98.3%;
+        }
+
+
+            .footer { /* Jag försökte med <grid-template-rows: 23% 18% 18% 18% 23%;> 
+                    och lite andra varianter, med <grid-row-start: 3;> men fick
+                    inte texten perfekt i mitten som när jag flexboxade till det */
+                display: flex;
+                align-items: center;
+                font-family: Helvetica Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                font-size: 64px;
+                line-height: 78px;
+                grid-row: 2;
+                grid-column: 2;
+                
+            }
+        
